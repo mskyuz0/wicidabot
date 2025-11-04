@@ -1,0 +1,25 @@
+{
+  "name": "wicidabot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "baileys": "^7.0.0-rc.6",
+    "fs": "^0.0.1-security",
+    "pino": "^10.1.0",
+    "qrcode": "^1.5.4"
+  }
+}
