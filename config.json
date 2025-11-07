@@ -1,4 +1,12 @@
 {
-    "pesanPembuka": "👋 Halo! Selamat datang di layanan kami.\n\nBerikut beberapa menu yang bisa kamu pilih\n1️⃣ Info Layanan\n2️⃣ Hubungi Admin\n3️⃣ Tutup percakapan.\n\nKetik angka *1*, *2*, atau *3* ya~",
-    "tidakAdaRespon": "Waduh, kayaknya udah agak lama nih tanpa respon 😅\nJadi aku tutup dulu percakapannya ya.\nKalau mau ngobrol lagi tinggal kirim pesan aja!"
+    "timeout" : 1,
+    "pesanPembuka": "Hai! 👋 Ada yang bisa aku bantu?",
+    "tidakAdaRespon": "Sepertinya kamu lagi sibuk ya 😅. Aku tutup dulu percakapannya, nanti kalau butuh tinggal kirim pesan aja!",
+    "knowledgeBase": {
+        "validasi krs": "Untuk validasi KRS, silakan login ke portal akademik kamu, lalu buka menu *KRS > Validasi*. Setelah itu, temui dosen wali untuk menyetujui KRS kamu.",
+        "pengisian krs": "Pengisian KRS biasanya dibuka di awal semester. Coba cek jadwal di portal akademik, ya!",
+        "khs": "KHS bisa dilihat di portal akademik, bagian *Nilai > KHS*. Pastikan semua mata kuliah sudah masuk sebelum mencetak.",
+        "transkrip": "Transkrip nilai bisa diunduh setelah semua nilai sudah tervalidasi. Biasanya ada di menu *Akademik > Transkrip Nilai*.",
+        "lupa password": "Kalau lupa password akun portal, hubungi bagian IT atau BAAK untuk reset password. Jangan lupa bawa kartu identitas, ya!"
+    }
 }
