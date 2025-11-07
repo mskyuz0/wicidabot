@@ -21,6 +21,8 @@
     "esModuleInterop": true,
     // Recommended Options
     "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
     "skipLibCheck": true,
   }
 }
