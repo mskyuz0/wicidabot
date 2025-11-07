@@ -11,7 +11,7 @@ async function connectToWhatsApp() {
     const { state, saveCreds } = await useMultiFileAuthState("./session");
     const WhatsAppClient = makeWASocket({
         auth: state,
-        logger: P({ level: 'silent' }),
+        logger: P.pino({ level: 'silent' }),
     });
 
     // ! Events Handling
