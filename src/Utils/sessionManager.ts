@@ -1,4 +1,5 @@
 import * as Config from '../../config.json'
+import * as thisText from './textFunction'
 
 interface Session {
     active: boolean
@@ -16,7 +17,7 @@ export function resetTimeout(sender: string, WhatsAppClient: any) {
     // Set ulang 5 menit (300.000 ms)
     userSessions[sender].timeout = setTimeout(async () => {
         try {
-            await WhatsAppClient.sendMessage(sender, { text: Config.tidakAdaRespon })
+            thisText.closingMessage(WhatsAppClient, sender)
         } catch (err) {
             console.error('Gagal mengirim pesan timeout:', err)
         }
