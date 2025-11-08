@@ -16,6 +16,10 @@
         "lupa password": {
             "aliases": ["lupa password", "lupa sandi", "lupa kata sandi", "reset password", "ganti password"],
             "answer": "Kalau lupa password akun portal, hubungi bagian PUSKOM atau BAAK untuk reset password. Jangan lupa bawa kartu identitas, ya!"
+        },
+        "surat aktif": {
+            "aliases": ["surat aktif", "surat keterangan aktif", "ska"],
+            "answer": "Surat Keterangan Aktif Kuliah adalah surat pernyataan yang dikeluarkan oleh STMIK Widya Cipta Dharma kepada Mahasiswa, yang menerangkan status Mahasiswa yang bersangkutan masih aktif dan terdaftar disemester tersebut.\n\n*Prosedur Surat Aktif Kuliah:*\n\n1. Mahasiswa mengajukan permohonan surat keterangan aktif kuliah dengan mengisi form melalui laman http://baak.wicida.ac.id/\n2. Setelah mengajukan permohonan, Mahasiswa dapat datang ke BAAK untuk mengambil Surat Keterangan Aktif Kuliah.\n3. Tunjukan Kwitansi Pembayaran BPP pada staff BAAK sebagai validasi."
         }
     }
 }
