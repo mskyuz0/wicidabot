@@ -1,12 +1,21 @@
 {
     "timeout" : 1,
-    "pesanPembuka": "Hai! 👋 Ada yang bisa aku bantu?",
-    "tidakAdaRespon": "Sepertinya kamu lagi sibuk ya 😅. Aku tutup dulu percakapannya, nanti kalau butuh tinggal kirim pesan aja!",
     "knowledgeBase": {
-        "validasi krs": "Untuk validasi KRS, silakan login ke portal akademik kamu, lalu buka menu *KRS > Validasi*. Setelah itu, temui dosen wali untuk menyetujui KRS kamu.",
-        "pengisian krs": "Pengisian KRS biasanya dibuka di awal semester. Coba cek jadwal di portal akademik, ya!",
-        "khs": "KHS bisa dilihat di portal akademik, bagian *Nilai > KHS*. Pastikan semua mata kuliah sudah masuk sebelum mencetak.",
-        "transkrip": "Transkrip nilai bisa diunduh setelah semua nilai sudah tervalidasi. Biasanya ada di menu *Akademik > Transkrip Nilai*.",
-        "lupa password": "Kalau lupa password akun portal, hubungi bagian IT atau BAAK untuk reset password. Jangan lupa bawa kartu identitas, ya!"
+        "validasi krs": {
+            "aliases": ["validasi krs", "verifikasi krs", "menyetujui krs"],
+            "answer": "Untuk validasi KRS, silakan login ke portal akademik kamu, lalu buka menu *KRS > Validasi*. Setelah itu, temui dosen wali untuk menyetujui KRS kamu."
+        },
+        "pengisian krs": {
+            "aliases": ["pengisian krs", "isi krs", "daftar mata kuliah"],
+            "answer": "Pengisian KRS biasanya dibuka di awal semester. Coba cek jadwal di portal akademik, ya!"
+        },
+        "transkrip": {
+            "aliases": ["transkrip"],
+            "answer": "Transkrip nilai bisa diunduh setelah semua nilai sudah tervalidasi. Biasanya ada di menu *Akademik > Transkrip Nilai*."
+        },
+        "lupa password": {
+            "aliases": ["lupa password", "lupa sandi", "lupa kata sandi", "reset password", "ganti password"],
+            "answer": "Kalau lupa password akun portal, hubungi bagian PUSKOM atau BAAK untuk reset password. Jangan lupa bawa kartu identitas, ya!"
+        }
     }
 }
