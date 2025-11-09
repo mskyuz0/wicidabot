@@ -1,23 +1,36 @@
-import * as Config from '../../config.json'
+import * as fs from 'fs'
+import path from 'path'
 
-export function findBestAnswer(input: string): string | null {
-    const knowledgeBase = Config.knowledgeBase as Record<string, {aliases: string[], answer: string}>
-    const inputLower = input.toLowerCase().normalize('NFKC')
-        .replace(/[^\w\s]/gi, ' ')
-        .replace(/\s+/g, ' ')
-        .trim()
+interface KnowledgeEntry {
+    keywords: string[]
+    execute: Function
+}
 
-    for (const key in knowledgeBase) {
-        const {aliases, answer} = knowledgeBase[key]
+const knowledgeMap = new Map<string, KnowledgeEntry>()
+const keywordIndex = new Map<string, KnowledgeEntry>()
+const knowledgeBasePath = path.join(__dirname, '../KnowledgeBase')
 
-        for (const alias of aliases){
-            const isText = alias.toLocaleLowerCase().normalize("NFKC").trim()
-            const regex = new RegExp(`\\b${isText}\\b`)
-            if (regex.test(inputLower)){
-                return answer
+export function loadKnowledgeBase() {
+    const files = fs.readdirSync(knowledgeBasePath)
+    for (const file of files) {
+        try {
+            const modulePath = path.join(knowledgeBasePath, file)
+            const kb: KnowledgeEntry = require(modulePath)
+
+            if (!kb.keywords || !kb.execute) continue
+
+            knowledgeMap.set(file, kb)
+
+            for (const key of kb.keywords) {
+                const getKey = key.toLocaleLowerCase().normalize('NFKC').trim()
+                keywordIndex.set(getKey, kb)
             }
+
+            console.log(`[KnowledgeBase] Loaded: ${file} (${kb.keywords.length} keywords.)`)
+        } catch (err) {
+            console.log(`[KnowledgeBase] Error loading ${file}:`, err)
         }
     }
-
-    return null
 }
+
+export { keywordIndex, knowledgeMap }
