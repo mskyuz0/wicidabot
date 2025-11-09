@@ -1,25 +1,6 @@
 {
     "timeout" : 1,
-    "knowledgeBase": {
-        "validasi krs": {
-            "aliases": ["validasi krs", "verifikasi krs", "menyetujui krs"],
-            "answer": "Untuk validasi KRS, silakan login ke portal akademik kamu, lalu buka menu *KRS > Validasi*. Setelah itu, temui dosen wali untuk menyetujui KRS kamu."
-        },
-        "pengisian krs": {
-            "aliases": ["pengisian krs", "isi krs", "daftar mata kuliah"],
-            "answer": "Pengisian KRS biasanya dibuka di awal semester. Coba cek jadwal di portal akademik, ya!"
-        },
-        "transkrip": {
-            "aliases": ["transkrip"],
-            "answer": "Transkrip nilai bisa diunduh setelah semua nilai sudah tervalidasi. Biasanya ada di menu *Akademik > Transkrip Nilai*."
-        },
-        "lupa password": {
-            "aliases": ["lupa password", "lupa sandi", "lupa kata sandi", "reset password", "ganti password"],
-            "answer": "Kalau lupa password akun portal, hubungi bagian PUSKOM atau BAAK untuk reset password. Jangan lupa bawa kartu identitas, ya!"
-        },
-        "surat aktif": {
-            "aliases": ["surat aktif", "surat keterangan aktif", "ska"],
-            "answer": "Surat Keterangan Aktif Kuliah adalah surat pernyataan yang dikeluarkan oleh STMIK Widya Cipta Dharma kepada Mahasiswa, yang menerangkan status Mahasiswa yang bersangkutan masih aktif dan terdaftar disemester tersebut.\n\n*Prosedur Surat Aktif Kuliah:*\n\n1. Mahasiswa mengajukan permohonan surat keterangan aktif kuliah dengan mengisi form melalui laman http://baak.wicida.ac.id/\n2. Setelah mengajukan permohonan, Mahasiswa dapat datang ke BAAK untuk mengambil Surat Keterangan Aktif Kuliah.\n3. Tunjukan Kwitansi Pembayaran BPP pada staff BAAK sebagai validasi."
-        }
-    }
+    "typoThreshold": 0.8,
+    "baakWebsite": "https://baak.wicida.ac.id/",
+    "siakWebsite": "https://siak.wicida.ac.id/"
 }
