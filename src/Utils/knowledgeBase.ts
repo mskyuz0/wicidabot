@@ -1,5 +1,7 @@
 import * as fs from 'fs'
+import * as Config from '../../config.json'
 import path from 'path'
+import { similarity } from './typoHandle'
 
 interface KnowledgeEntry {
     keywords: string[]

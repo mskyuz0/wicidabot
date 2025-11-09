@@ -3,7 +3,7 @@ export function handleTypo(a: string, b: string): number {
     const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0))
 
     for (let i = 0; i <= m; i++) dp[i][0] = i
-    for (let j = 0; j <= m; j++) dp[j][0] = j
+    for (let j = 0; j <= n; j++) dp[0][j] = j
 
     for (let i = 1; i <= m; i++){
         for (let j = 1; j <= n; j++){
@@ -21,6 +21,9 @@ export function handleTypo(a: string, b: string): number {
 }
 
 export function similarity(a: string, b: string): number {
+    a = a.toLowerCase().normalize('NFKC').trim()
+    b = b.toLowerCase().normalize('NFKC').trim()
+    
     const distance = handleTypo(a, b)
     const maxLen = Math.max(a.length, b.length)
     
