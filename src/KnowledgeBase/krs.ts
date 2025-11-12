@@ -1,7 +1,7 @@
 import * as Config from '../../config.json'
 
 module.exports = {
-    keywords: ["validasi krs", "verifikasi krs", "menyetujui krs"],
+    keywords: ["validasi krs", "verifikasi krs", "valid krs"],
     async execute(WhatsAppClient: any, sender: any){
         await WhatsAppClient.sendMessage(sender, { text: `Untuk validasi KRS, kamu bisa ikuti prosedur dibawah ini:
 
