@@ -47,7 +47,7 @@ module.exports = {
 
             const score = similarity(key, isMessage)
 
-            if (score > bestScore && score >= Config.typoThreshold){
+            if (score > bestScore && score >= Config.typoThreshold) {
                 hasAnswer = kb
                 bestScore = score
             }
