@@ -8,7 +8,7 @@ interface KnowledgeEntry {
 
 const knowledgeMap = new Map<string, KnowledgeEntry>()
 const keywordIndex = new Map<string, KnowledgeEntry>()
-const knowledgeBasePath = path.join(__dirname, '../KnowledgeBase')
+const knowledgeBasePath = path.join(__dirname, '../Commands')
 
 export function loadKnowledgeBase() {
     const files = fs.readdirSync(knowledgeBasePath)
