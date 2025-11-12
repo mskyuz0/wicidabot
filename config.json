@@ -1,6 +1,7 @@
 {
     "timeout" : 1,
-    "typoThreshold": 0.75,
+    "typoThreshold": 0.4,
     "baakWebsite": "https://baak.wicida.ac.id/",
     "siakWebsite": "https://siak.wicida.ac.id/"
 }
+
