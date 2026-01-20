@@ -1,9 +1,9 @@
 import * as Config from '../../config.json'
 
 module.exports = {
-    keywords: ["validasi krs", "verifikasi krs", "valid krs"],
+    keywords: ["validasi krs", "verifikasi krs", "valid krs", "cetak krs"],
     async execute(WhatsAppClient: any, sender: any){
-        await WhatsAppClient.sendMessage(sender, { text: `Untuk validasi KRS, kamu bisa ikuti prosedur dibawah ini:
+        await WhatsAppClient.sendMessage(sender, { text: `Untuk validasi atau cetak KRS, kamu bisa ikuti prosedur dibawah ini:
 
 1. Kunjugi website SIAK WICIDA (${Config.siakWebsite}).
 2. Lakukan input KRS pada menu KRS di sidebar kiri.
