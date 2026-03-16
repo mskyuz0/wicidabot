@@ -1,4 +1,5 @@
 import {
+    fetchLatestBaileysVersion,
     makeWASocket,
     useMultiFileAuthState,
 } from "baileys";
@@ -9,8 +10,10 @@ import * as path from 'node:path'
 async function connectToWhatsApp() {
     // ! Auth
     const { state, saveCreds } = await useMultiFileAuthState("./session");
+    const { version } = await fetchLatestBaileysVersion();
     const WhatsAppClient = makeWASocket({
         auth: state,
+        version,
         logger: P.pino({ level: 'silent' }),
     });
 
