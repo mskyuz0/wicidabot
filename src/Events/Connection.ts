@@ -1,29 +1,32 @@
 import {
     DisconnectReason,
+    WASocket,
+    ConnectionState
 } from "baileys";
 import * as QRCode from "qrcode";
 import { Boom } from "@hapi/boom";
 
 module.exports = {
     name: 'connection.update',
-    async execute(WhatsAppClient: any, connectToWhatsApp: any, update: any) {
+    async execute(baileysSock: WASocket, ConnectWhatsApp: () => Promise<void>, update: Partial<ConnectionState>) {
         const { connection, lastDisconnect, qr } = update;
 
+        // ? Uncomment this if you wan't qr code then comment code above!
         if (qr) {
-            console.log("[SYSTEM] Please Scan QRCode for below to login:");
-            // QRCode.generate(qr, { small: true })
-            console.log(await QRCode.toString(qr, {type: 'terminal', small: true, margin: 0, scale: 1}))
+            console.log("[SYSTEM] Please Scan QRCode for below to login:\n");
+            console.log(await QRCode.toString(qr, {type: 'terminal', small: true}));
         }
 
         if (connection === 'close') {
             const shouldReconnect = lastDisconnect?.error instanceof Boom && (lastDisconnect.error as Boom).output?.statusCode !== DisconnectReason.loggedOut;
+            const isError: Boom<any> = lastDisconnect?.error as Boom
 
-            console.log("[SYSTEM] Connection closed due to", lastDisconnect?.error);
+            console.log(`[SYSTEM] Connection closed (${isError?.output?.statusCode}): ${isError?.message}`);
 
             if (shouldReconnect) {
                 console.log("[SYSTEM] Reconnecting...");
                 await new Promise((res) => setTimeout(res, 2000));
-                connectToWhatsApp();
+                ConnectWhatsApp();
             } else {
                 console.log("Logged out. Delete session folder if needed.");
             }
