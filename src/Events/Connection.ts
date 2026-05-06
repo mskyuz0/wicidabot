@@ -11,7 +11,6 @@ module.exports = {
     async execute(baileysSock: WASocket, ConnectWhatsApp: () => Promise<void>, update: Partial<ConnectionState>) {
         const { connection, lastDisconnect, qr } = update;
 
-        // ? Uncomment this if you wan't qr code then comment code above!
         if (qr) {
             console.log("[SYSTEM] Please Scan QRCode for below to login:\n");
             console.log(await QRCode.toString(qr, {type: 'terminal', small: true}));

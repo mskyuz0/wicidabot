@@ -1,5 +1,6 @@
 import * as thisText from '../Utils/textFunction'
 import * as Config from '../../config.json'
+import { WASocket, WAMessageUpdate } from "baileys"
 import { keywordIndex, loadKnowledgeBase } from '../Utils/knowledgeBase'
 import { resetTimeout, userSessions } from '../Utils/sessionManager'
 import { similarity } from '../Utils/typoHandle'
@@ -8,7 +9,7 @@ loadKnowledgeBase()
 
 module.exports = {
     name: 'messages.upsert',
-    async execute(WhatsAppClient: any, connectToWhatsApp: any, res: any) {
+    async execute(WhatsAppClient: WASocket, ConnectWhatsApp: () => Promise<void>, res: any) {
         const message = res.messages[0]
         const isMsg = message.message
 
@@ -57,10 +58,11 @@ module.exports = {
 
         try {
             await hasAnswer.execute(WhatsAppClient, sender)
-            thisText.moreQuestion(WhatsAppClient, sender)
         } catch (err) {
             console.log(`[KnowledgeBase] Error executing keyword: ${err}`)
             thisText.notFoundKeyword(WhatsAppClient, sender)
         }
+
+        thisText.moreQuestion(WhatsAppClient, sender)
     }
 }

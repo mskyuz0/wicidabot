@@ -8,7 +8,6 @@ interface Session {
 
 export const userSessions: Record<string, Session> = {}
 
-// Mengatur ulang timer tiap kali user kirim pesan baru
 export function resetTimeout(sender: string, WhatsAppClient: any) {
     if (userSessions[sender]?.timeout) {
         clearTimeout(userSessions[sender].timeout)
