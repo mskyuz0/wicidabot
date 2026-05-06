@@ -14,3 +14,9 @@ export function notFoundKeyword(WhatsAppClient: any, sender: string){
 export function moreQuestion(WhatsAppClient: any, sender: string){
     WhatsAppClient.sendMessage(sender, {text: `Apakah masih ada pertanyaan lain ? Jika tidak ada kamu bisa abaikan pesan ini.`})
 }
+
+export async function antiGroups(WhatsAppClient: any, sender: string){
+    await WhatsAppClient.sendMessage(sender, {text: `🚫 *Maaf, bot ini tidak melayani grup.*
+
+Gunakan melalui chat pribadi. Terima kasih! 🙏`})
+}
