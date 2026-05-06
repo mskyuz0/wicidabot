@@ -1,5 +1,5 @@
 {
-    "timeout" : 1,
+    "timeout" : 10,
     "typoThreshold": 0.4,
     "baakWebsite": "https://baak.wicida.ac.id/",
     "siakWebsite": "https://siak.wicida.ac.id/"
